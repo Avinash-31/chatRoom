@@ -11,8 +11,8 @@ http.listen(port,()=>{
   console.log( `Listening on port ${port}`)
 })
 
-app.use(express.static('/coding/web dev/nodejs/chatbot/css'))
-app.use(express.static('/coding/web dev/nodejs/chatbot/script'))
+app.use(express.static('addYourLocation/chatbot/css'))
+app.use(express.static('addYourLoaction/chatbot/script'))
 
 app.get('/',(req,res)=>{
   res.sendFile('/coding/web dev/nodejs/chatbot/index.html')
