@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatApp_AV</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css">
+    <!-- node server script connected -->
+    <!-- <script src="/socket.io/socket.io.js"></script> -->
+    <!-- <script>
+        var socket = io('http://localhost:8000');
+    </script> -->
+
+</head>
+
+<body>
+    <div class="area">
+        <ul class="circles">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        <div class="container">
+            <div class="header">
+                <!-- <div class="grp-img">
+                    <img class="i1" src="https://images.unsplash.com/photo-1660476705851-21e527337f9a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxOHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60" alt="">
+                    <img class="i2" src="https://images.unsplash.com/photo-1657299143482-4f4ea1ebd71c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxMXx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60" alt="">
+                    <img class="i3" src="https://images.unsplash.com/photo-1660481451479-7ad6d6ad0223?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw3fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60" alt="">
+                </div> -->
+
+                <!-- <div class="grp-info">
+                <h3 class="grp-name">
+                    Elnora, Lelia, Lucinda
+            </h3>
+            <p class="grp-status">
+                We tipically reply in a few minutes
+            </p>
+        </div> -->
+                <!-- <img src="./ChatPack.png" alt=""> -->
+                <div class="heading">
+                    <b>🌀ChatBox_AV</b>
+                </div>
+            </div>
+
+
+            <div class="chatbox">
+                <!-- <p class="`">Joined</p> -->
+            </div>
+
+            <!-- <div class="policy" id="policy">
+                <p>
+                    By using the chat, I confirm that I have read the <a href="#">privacy policy</a> and do not object
+                    to
+                    the use of my personal data.
+                </p>
+                <a href="#" class="agree" onclick="removePolicy()">
+                    I agree
+                </a>
+            </div> -->
+
+            <div class="chatbox_send">
+                <form action="#" id="sendForm">
+                    <input type="text" name="message" id="message" class="input" onkeypress="handleKeyPress(event)"
+                        placeholder="   Enter your message">
+                    <button class="btn" id="submit" onclick="btnClick()" type="button"><i
+                            class="material-icons">send</i></button>
+                </form>
+            </div>
+
+        </div>
+        <!-- <a href="#" class="close">
+            <ion-icon name="close-outline"></ion-icon>
+        </a> -->
+        <!-- <div class="copyright">
+            ©️By Avinash
+        </div> -->
+
+    </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script defer src="/socket.io/socket.io.js"></script>
+    <script defer src="/client.js"></script>
+</body>
+
+</html>

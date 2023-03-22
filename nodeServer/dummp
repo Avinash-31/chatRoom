@@ -1,0 +1,71 @@
+// const io = require('socket.io')(8000)
+
+
+// const express = require('express');
+// const cors = require('cors');
+
+// const app = express();
+
+// app.use(cors({
+//   origin: 'http://localhost:8000' // replace with your domain
+// }));
+
+// rest of your server code
+
+// app.listen(8000, () => {
+//   console.log('Server started on port 8000');
+// });
+// const express = require('express');
+// const cors = require('cors');
+
+// const app = express();
+
+// // Enable CORS for all routes
+// app.use(cors());
+
+// // Your routes and middleware
+// app.get('/', (req, res) => {
+//   res.send('Hello, world!');
+// });
+
+// // Start the server
+// app.listen(8000, () => {
+//   console.log('Server started on http://localhost:3000');
+// });
+
+// const users = {};
+
+// console.log("running");
+// console.log("hello");
+
+// io.on('connection', socket =>{        //listens all the connections      
+//     socket.on('newUserJoined' , userName =>{     //accepts event
+//         console.log("New user : ", userName)
+//         users[socket.id]=userName;
+//         socket.broadcast.emit('userJoined', userName); //emits the rest of the users;  tells the userName of the user who joined 
+//     });
+
+//     socket.on('send', message =>{  //socket.io runs this event when it gets the request of send
+//         socket.broadcast.emit('receive',{message: message,userName: users[socket.id]})
+//     });
+// })
+
+
+const socket = io('http://localhost:3000');
+
+socket.on('chat-message',data =>{
+    console.log(data)
+})
+const form = document.getElementById('sendForm');
+const inputMessage = document.getElementById('message');
+
+//location where the messages need to be stored
+
+const msgContainer = document.querySelector(".chatbox");
+
+//To store the name of the user when he enters the chat
+
+const userName = prompt("Enter your User Name : ");
+
+socket.emit('newUserJoined',userName);
+ 
